@@ -25,7 +25,7 @@ const products = [
     id: 4,
     name: 'Windows Laptop',
     description: 'Perfect for productivity and gaming.',
-    image: '',
+    image: './assets/images/Asus-zephyrusG16.jpg',
     price: '$1,099',
   },
 ];
