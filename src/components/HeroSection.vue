@@ -4,7 +4,7 @@
 <template>
   <section class="hero">
     <div class="content">
-      <h1 class="hero-title">New Laptop</h1>
+      <h1 class="hero-title">Brand New Laptop</h1>
       <p class="hero-subtitle">We have in stock</p>
       <button>Shop Now</button>
     </div>

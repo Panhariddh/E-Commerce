@@ -1,23 +1,17 @@
 <script setup>
- import HeaderComponent from './components/HeaderComponent.vue'
- import HeroSection from './components/HeroSection.vue'
- import BrandList from './components/BrandList.vue'
- import ProductGallery from './components/ProductGallery.vue'
- import FooterComponent from './components/FooterComponent.vue'
-
+import HeaderComponent from './components/HeaderComponent.vue'
+import FooterComponent from './components/FooterComponent.vue'
 </script>
 
 <template>
   <div class="app">
-  <div>
-    <HeaderComponent />
-    <main>
-      <HeroSection />
-      <BrandList />
-      <ProductGallery />
-    </main>
-    <FooterComponent />
-  </div>
+    <div>
+      <HeaderComponent />
+      <main>
+        <router-view />
+      </main>
+      <FooterComponent />
+    </div>
   </div>
 </template>
 
