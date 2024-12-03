@@ -9,11 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@fortawesome/fontawesome-free": "^6.7.1",
-=======
     "e-commerce": "file:",
->>>>>>> 15186338ab8c48176fc5708097db6f6a2980a082
     "pinia": "^2.2.6",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
