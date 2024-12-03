@@ -1,11 +1,11 @@
 <script setup>
 const brands = [
-  { name: 'Apple', logo: 'apple-logo.png' },
-  { name: 'Acer', logo: 'acer-logo.png' },
-  { name: 'MSI', logo: 'msi-logo.png' },
-  { name: 'Lenovo', logo: 'lenovo-logo.png' },
-  { name: 'Dell', logo: 'dell-logo.png' },
-  { name: 'Asus', logo: 'asus-logo.png' },
+  { name: 'Apple', logo: '/src/assets/images/apple-logo.png'},
+  { name: 'Acer', logo: '/src/assets/images/acer-logo.png' },
+  { name: 'MSI', logo: '/src/assets/images/msi-logo.png' },
+  { name: 'Lenovo', logo: '/src/assets/images/lenovo-logo.png' },
+  { name: 'Dell', logo: '/src/assets/images/Dell_logo.png' },
+  { name: 'Asus', logo: '/src/assets/images/Asus-logo.png' },
 ]
 </script>
 
@@ -13,8 +13,9 @@ const brands = [
   <aside class="brand-list">
     <h3>Popular Brands</h3>
     <ul>
-      <li v-for="brand in brands" :key="brand.name">
-        <img :src="``" :alt="brand.name" />
+      <li v-for="brand in brands" :key="brand.name" class="brand-item">
+        <img :src="brand.logo" :alt="brand.name" />
+        <p>{{ brand.name }}</p>
       </li>
     </ul>
   </aside>
