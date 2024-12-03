@@ -1,6 +1,5 @@
 <script setup>
 </script>
-
 <template>
   <header>
     <div class="logo">
