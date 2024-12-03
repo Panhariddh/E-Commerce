@@ -9,26 +9,37 @@
 
 <template>
   <div class="app">
-  <div>
-    <HeaderComponent />
-    <main>
+
+    <div>
+      <HeaderComponent />
+    </div>
+
+    <div>
       <HeroSection />
+    </div>
+    
+    <div>
       <BrandList />
+    </div>
+
+    <div>
       <ProductGallery />
-    </main>
-    <FooterComponent />
-  </div>
+    </div>
+
+    <div>
+      <FooterComponent />
+    </div>
+
   </div>
 </template>
 
 <style>
 /* Add global styles or container-level styles here */
 .app {
-  background-color: #F1F1F1;
+  background-color: #e6e3e3;
   width: 100vw;
-  height: 100vh;
-}
-main {
+  height: 100vw;
   padding: 0 1rem;
 }
+
 </style>
