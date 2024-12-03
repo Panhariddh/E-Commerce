@@ -1,5 +1,8 @@
 // import './assets/main.css'
+<<<<<<< HEAD
+=======
 
+>>>>>>> 8cdec170729773078532663081bb809073026322
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
