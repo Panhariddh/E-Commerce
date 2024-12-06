@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
     "e-commerce": "file:",
     "pinia": "^2.2.6",
     "vue": "^3.5.12",
