@@ -25,10 +25,12 @@
     <hr />
 
     <!-- Google Login Button -->
-    <button class="google-login">
-      <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google Logo" class="google-logo" />
-      Sign in with Google
-    </button>
+    <div class="google-login">
+      <button>
+        <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google Logo" class="google-logo" />
+        Sign in with Google
+      </button>
+    </div>
 
     <div class="additional-links">
       <p>Don’t have an account? <router-link to="/register">Register</router-link></p>
@@ -67,7 +69,7 @@ export default {
 }
 
 form {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 input[type="email"],
@@ -86,10 +88,11 @@ input[type="password"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  width: 60%; /* Ensures the login button spans the full width */
+  margin-bottom: 10px; /* Space between the login and Google button */
 }
 
-.google-login {
+.google-login button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +102,7 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
+  width: 100%; /* Ensures the Google button spans the full width */
 }
 
 .google-logo {
