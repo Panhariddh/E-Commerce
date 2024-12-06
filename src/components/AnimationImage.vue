@@ -1,128 +1,121 @@
 <template>
-    <section class="hero" :style="{ backgroundImage: 'url(\'https://i.pinimg.com/736x/ec/2b/b5/ec2bb5fed0eac5753504e8bbf510df9f.jpg\')' }">
-      <div class="content">
-        <div class="AllText">
-          <h1 class="hero-title">Brand New Laptop</h1>
-          <p class="hero-subtitle">We have in stock</p>
-          <button>Shop Now</button>
-        </div>
-      </div>
-      <div class="Image">
-        <transition name="fade" mode="out-in">
-          <div class="ALLImage" key="image">
-            <img :src="ImageAnimation" alt="New Laptop" />
-          </div>
-        </transition>
-      </div>
-    </section>
-  </template>
-  
-  <script>
-  import picture1 from '../assets/picture1.png';
-  import picture2 from '../assets/picture2.png';
-  import picture3 from '../assets/picture3.png';
-  import picture4 from '../assets/picture4.png';
-  import picture5 from '../assets/picture5.png';
-  import picture6 from '../assets/picture6.png';
-  export default {
-    data() {
-      return {
-        imgs: [picture1, picture2, picture3, picture4,picture5,picture6],
-        indexNbr: 0,
-        intervalId: null,
-      };
-    },
-    computed: {
-      ImageAnimation() {
-        return this.imgs[this.indexNbr];
-      },
-    },
-    methods: {
-      changeImage() {
-        this.indexNbr = (this.indexNbr + 1) % this.imgs.length; // Cycle through images
-      },
-      startAutoChange() {
-        this.intervalId = setInterval(this.changeImage, 1500); // Change image every 1.5 seconds
-      },
-      stopAutoChange() {
-        clearInterval(this.intervalId);
-      },
-    },
-    mounted() {
-      this.startAutoChange(); // Start automatic image change when component is mounted
-    },
-    beforeDestroy() {
-      this.stopAutoChange(); // Clean up interval when component is destroyed
-    },
-  };
-  </script>
-  
-  <style scoped>
-  .hero {
-    width: 100%;
-    height: 35rem;
-    display: flex;
-    border: 1px solid black;
-    background-size: cover;
-    background-repeat: no-repeat;
+  <div class="containerImage">
+    <div class="boxImage1">
+      <img :src="images1[currentIndex1]" alt="" class="w-100 h-100 animated-image">
+    </div>
+    <div class="boxImage2">
+      <img :src="images2[currentIndex2]" alt="" class="w-100 h-100 animated-image">
+    </div>
+    <div class="boxImage3">
+      <img :src="images3[currentIndex3]" alt="" class="w-100 h-100 animated-image">
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AnimationImage",
+  data() {
+    return {
+      images1: [
+        "https://i.pinimg.com/736x/97/06/b0/9706b038a841d33b9f001e002be7bfc7.jpg",
+        "https://i.pinimg.com/736x/a8/0b/2c/a80b2c69257970df9fc3fa8b7f9f1b59.jpg",
+        "https://i.pinimg.com/736x/32/38/58/323858092375150e338acbaf2de0bcc1.jpg",
+        "https://i.pinimg.com/736x/53/e3/16/53e3165ed52818dd70f71a952b5e18c0.jpg"
+      ],
+      images2: [
+        "https://i.pinimg.com/736x/58/96/e9/5896e90ddd3d561dd53c483c6a01d2b9.jpg",
+        "https://i.pinimg.com/736x/51/be/9d/51be9d330e9dd1e9d36a3b988bd99362.jpg",
+        "https://i.pinimg.com/736x/7f/36/b4/7f36b42bd6c9395fa9c7ddb0c2022eba.jpg",
+        "https://i.pinimg.com/736x/3a/99/30/3a993083df855c7113d1bb2f5fe0d32c.jpg"
+      ],
+      images3: [
+        "https://i.pinimg.com/736x/0d/0c/ac/0d0caca63ec46f1907759166ff4ebb70.jpg",
+        "https://i.pinimg.com/736x/d9/61/13/d961137ba946e1b89d748f839b0a9616.jpg",
+        "https://i.pinimg.com/736x/58/96/e9/5896e90ddd3d561dd53c483c6a01d2b9.jpg",
+        "https://i.pinimg.com/736x/5b/49/f1/5b49f129f307be99ff9c4b8696da2532.jpg"
+      ],
+      currentIndex1: 0,
+      currentIndex2: 0,
+      currentIndex3: 0
+    };
+  },
+  mounted() {
+    this.startImageAnimation();
+  },
+  methods: {
+    startImageAnimation() {
+      setInterval(() => {
+        this.currentIndex1 = (this.currentIndex1 + 1) % this.images1.length;
+        this.currentIndex2 = (this.currentIndex2 + 1) % this.images2.length;
+        this.currentIndex3 = (this.currentIndex3 + 1) % this.images3.length;
+      }, 2000); // Change every 3 seconds
+    }
   }
-  
-  .content {
-    width: 40%;
-    height: 100%;
-    position: relative;
-  }
-  
-  .AllText {
-    position: absolute;
-    top: 15%;
-    left: 10%;
-  }
-  
-  .hero-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
-  
-  button {
-    background-color: #00c9a7;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #00a68c;
-  }
-  
-  .Image {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-container {
-    width: 90%;
-    height: 90%;
-  }
-  
-  img {
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease; /* Add transition for smoothness */
-  }
-  .fade-enter-active, .fade-leave-active {
-    transition: opacity 0.5s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+};
+</script>
+
+<style scoped>
+.containerImage {
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.boxImage1,
+.boxImage2,
+.boxImage3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.636);
+  animation: rotateImage 9s linear infinite;
+}
+
+.boxImage1 {
+  width: 28%;
+  height: 60%;
+}
+
+.boxImage2 {
+  width: 40%;
+  height: 83%;
+}
+
+.boxImage3 {
+  width: 28%;
+  height: 60%;
+}
+.animated-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  animation: rotateImage 9s linear infinite; /* Rotates images seamlessly */
+}
+
+@keyframes rotateImage {
+  0% {
     opacity: 0;
+    transform: scale(1.1);
   }
-  </style>
+  10% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+</style>
