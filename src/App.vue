@@ -5,6 +5,7 @@ import FooterComponent from './components/FooterComponent.vue'
 
 <template>
   <div class="app">
+
     <div>
       <HeaderComponent />
 
@@ -14,16 +15,39 @@ import FooterComponent from './components/FooterComponent.vue'
       
       <FooterComponent />
     </div>
+
+
+    <div>
+      <HeaderComponent />
+    </div>
+
+    <div>
+      <HeroSection />
+    </div>
+    
+    <div>
+      <BrandList />
+    </div>
+
+    <div>
+      <ProductGallery />
+    </div>
+
+    <div>
+      <FooterComponent />
+    </div>
+
   </div>
 </template>
 
-<style>
+<style scoped>
 /* Add global styles or container-level styles here */
 .app {
-  background-color: #e6e3e3;
+  /* background-color: #e6e3e3;
   width: 100vw;
   height: 100vw;
-  padding: 0 1rem;
+
+  padding: 0 1rem; */
 }
 main {
   padding: 0 1rem;

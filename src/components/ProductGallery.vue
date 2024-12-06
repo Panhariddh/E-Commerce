@@ -19,14 +19,35 @@ const products = [
     name: 'Apple MacBook Pro',
     description: 'Ultra-slim design for portability.',
     image: '/src/assets/images/Apple.png',
+    name: 'Asus ROG Strix G15',
+    description: 'Sleek design with high performance.',
+    image: 'https://m.media-amazon.com/images/I/71uwt2lB0gL._AC_SL1500_.jpg',
+    price: '$899',
+  },
+  {
+    id: 2,
+    name: 'Alienware M18 Gaming Laptop',
+    description: 'Lightweight and powerful for work.',
+    image: 'https://m.media-amazon.com/images/I/61+ys4-1LkL._AC_SX466_.jpg',
+    price: '$949',
+  },
+  {
+    id: 3,
+    name: 'MSI Katan 17 B13UDXK',
+    description: 'Ultra-slim design for portability.',
+    image: 'https://m.media-amazon.com/images/I/81vnNsRDo6L._AC_SX466_.jpg',
     price: '$1,199',
   },
   {
     id: 4,
-    name: 'Windows Laptop',
+    name: 'ASUS ROG Strix G16 (2024)',
     description: 'Perfect for productivity and gaming.',
+
     image: '/src/assets/images/alien.png',
     price: '$1,099',
+
+    image: 'https://m.media-amazon.com/images/I/81GrCeuCzxL.jpg',
+    price: '$1,399',
   },
 ];
 </script>
@@ -36,7 +57,7 @@ const products = [
     <h2>Featured Products</h2>
     <div class="grid">
       <div v-for="product in products" :key="product.id" class="product-card">
-        <img :src="product.image" :alt="product.name" />
+        <img :src="product.image" :alt="product.name" class="image"/>
         <h3>{{ product.name }}</h3>
         <p>{{ product.description }}</p>
         <span class="price">{{ product.price }}</span>
@@ -50,6 +71,7 @@ const products = [
 .product-gallery {
   padding: 2rem;
   text-align: center;
+  background-color: #f09a9a;
 }
 
 .product-gallery h2 {
@@ -80,7 +102,7 @@ const products = [
 
 .product-card img {
   max-width: 100%;
-  height: auto;
+  height: 250px;
   border-radius: 8px;
 }
 
@@ -102,7 +124,7 @@ const products = [
   display: block;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #00c9a7;
+  color: #000000;
   margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -116,7 +138,6 @@ const products = [
   cursor: pointer;
   width: 50%;
 }
-
 .product-card button:hover {
   background-color: #008f7a;
 }
