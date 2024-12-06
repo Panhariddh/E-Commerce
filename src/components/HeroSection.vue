@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  background-color: #6c6767;
+  background-color: #ffffff;
 }
 
 .content {
