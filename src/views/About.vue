@@ -1,9 +1,8 @@
 <template>
+  <HeaderComponent/>
   <div class="about-us-page">
     <div class="about-us">
-      <nav class="breadcrumb">
-        <a href="#">Home</a> > <span>About Us</span>
-      </nav>
+      <p class="breadcrumb">Home › <b>About Us</b></p>
       <h1>About PC Ember Store</h1>
       <p class="welcome-message">
         Welcome to PC Ember Store, your trusted destination for all things PC!
@@ -24,12 +23,12 @@
       </p>
     </div>
   </div>
+  <FooterComponent/>
 </template>
 
-<script>
-export default {
-  name: "AboutUs",
-};
+<script setup>
+import FooterComponent from '@/components/FooterComponent.vue';
+import HeaderComponent from '@/components/HeaderComponent.vue';
 </script>
 
 <style scoped>
@@ -51,10 +50,12 @@ export default {
 }
 
 .breadcrumb {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: #007bff; /* Clear link color */
-}
+    color: #7f7878; 
+    font-size: 16px;
+    margin-top: 0.5rem;
+    z-index: 1; 
+    position: relative;
+  }
 
 h1 {
   font-size: 24px;

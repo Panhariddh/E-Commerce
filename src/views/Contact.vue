@@ -1,7 +1,9 @@
 <template>
+  <HeaderComponent/>
   <div class="contact-page">
-    <h1>Contact Us</h1>
-    <h2>PC X Ember Store</h2><br>
+    <p class="breadcrumb">Home › <b>Contact Us</b></p>
+    <h1 class="contact-title">Contact Us</h1>
+    <h2 class="store-name">PC X Ember Store</h2><br>
     <ul>
       <li><strong>Address:</strong> Kampuchea Krom Blvd, Sangkat Teuk L’ak ti pir, Khan Toul Kork, Phnom Penh, Cambodia</li>
       <li><strong>Sales Phone Number:</strong> 012 111 111 / 010 112 321</li>
@@ -23,9 +25,13 @@
       </li>
     </ul>
   </div>
+  <FooterComponent/>
 </template>
 
 <script setup>
+import FooterComponent from '@/components/FooterComponent.vue';
+import HeaderComponent from '@/components/HeaderComponent.vue';
+
 </script>
 
 <style>
@@ -39,14 +45,24 @@
   background-color: #ffffff;
 }
 
-h1 {
-  font-size: 28px;
+.breadcrumb {
+    color: #7f7878; 
+    font-size: 16px;
+    margin-top: 0.5rem;
+    z-index: 1; 
+    position: relative;
+  }
+
+.contact-title {
+  font-size: 28px; /* Adjust as needed */
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-h2 {
-  font-size: 24px;
+.store-name {
+  font-size: 24px; /* Adjust as needed */
   margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 ul {

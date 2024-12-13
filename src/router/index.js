@@ -7,6 +7,8 @@ import Shop from '@/views/Shop.vue'
 import Contact from '@/views/Contact.vue'
 import About from '@/views/About.vue'
 import Login from '@/views/Login.vue'  // import the Login component
+// import Notifications from '@/views/Notifications.vue'; // New notifications view
+// import Cart from '@/views/Cart.vue'; // New cart view
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,16 +38,24 @@ const router = createRouter({
       name: 'about',
       component: About,
     },
-
-    {
-      path:'/',
-      redirect: '/login',
-    },
-
     {
       path: '/login',  // Add the login route
       name: 'login',
       component: Login,
+    },
+    // {
+    //   path: '/notifications',
+    //   name: 'notifications',
+    //   component: Notifications,
+    // },
+    // {
+    //   path: '/cart',
+    //   name: 'cart',
+    //   component: Cart,
+    // },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/login', // Redirects any undefined route to the login page
     },
   ],
 })

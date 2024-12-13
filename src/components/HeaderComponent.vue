@@ -11,9 +11,15 @@
       <div class="actions">
         <input type="text" placeholder="Search..." class="search-bar" />
         <div class="icons">
-          <i class="fas fa-user" title="User"></i>
-          <i class="fas fa-bell" title="Notifications"></i>
-          <i class="fas fa-shopping-cart" title="Cart"></i>
+          <router-link to="/login" title="User">
+            <i class="fas fa-user"></i>
+          </router-link>
+          <router-link to="/notifications" title="Notifications">
+            <i class="fas fa-bell"></i>
+          </router-link>
+          <router-link to="/cart" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+          </router-link>
         </div>
       </div>
     </div>
@@ -78,9 +84,19 @@
   right: 0; /* Icons aligned to the far right */
 }
 
+.icons a {
+  color: black; /* Set the icon color to black */
+  text-decoration: none; /* Remove any underline */
+}
+
+.icons a:hover {
+  color: teal; /* Optional: Change color on hover */
+}
+
 .icons i {
   font-size: 1.2rem;
   cursor: pointer;
+  color: black;
 }
 
 /* Bottom Section: Navigation Links */
