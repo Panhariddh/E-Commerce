@@ -102,7 +102,7 @@ export default {
 .left-section img {
 
   width: 100%;
-  height: 75vh;
+  height: 74vh;
 }
 
 .right-section {
