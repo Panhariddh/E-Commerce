@@ -170,7 +170,7 @@ input {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%;
+  width: 35%;
   margin-bottom: 20px;
 }
 
