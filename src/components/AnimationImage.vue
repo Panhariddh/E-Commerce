@@ -11,7 +11,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: "AnimationImage",
@@ -54,7 +53,6 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 .containerImage {
   width: 100%;
@@ -77,17 +75,14 @@ export default {
   box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.636);
   animation: rotateImage 9s linear infinite;
 }
-
 .boxImage1 {
   width: 28%;
   height: 60%;
 }
-
 .boxImage2 {
   width: 40%;
   height: 83%;
 }
-
 .boxImage3 {
   width: 28%;
   height: 60%;
@@ -99,7 +94,6 @@ export default {
   position: absolute;
   animation: rotateImage 9s linear infinite; /* Rotates images seamlessly */
 }
-
 @keyframes rotateImage {
   0% {
     opacity: 0;

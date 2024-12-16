@@ -25,20 +25,6 @@ const products = [
     price: '$899',
   },
   {
-    id: 2,
-    name: 'Alienware M18 Gaming Laptop',
-    description: 'Lightweight and powerful for work.',
-    image: 'https://m.media-amazon.com/images/I/61+ys4-1LkL._AC_SX466_.jpg',
-    price: '$949',
-  },
-  {
-    id: 3,
-    name: 'MSI Katan 17 B13UDXK',
-    description: 'Ultra-slim design for portability.',
-    image: 'https://m.media-amazon.com/images/I/81vnNsRDo6L._AC_SX466_.jpg',
-    price: '$1,199',
-  },
-  {
     id: 4,
     name: 'ASUS ROG Strix G16 (2024)',
     description: 'Perfect for productivity and gaming.',
