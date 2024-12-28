@@ -33,7 +33,7 @@
     </div>
 
     <div class="additional-links">
-      <p>Don’t have an account? <router-link to="/register">Register</router-link></p>
+      <p>Don't have an account? <router-link to="/register">Register</router-link></p>
       <p>Forget Password? <router-link to="/reset-password">Reset Password</router-link></p>
     </div>
   </div>
@@ -89,6 +89,7 @@ input[type="password"] {
   border-radius: 5px;
   cursor: pointer;
   width: 60%; /* Ensures the login button spans the full width */
+  margin-top: 20px;
   margin-bottom: 10px; /* Space between the login and Google button */
 }
 

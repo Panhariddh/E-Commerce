@@ -17,13 +17,10 @@ import FooterComponent from './components/FooterComponent.vue'
 </template>
 
 <style>
-/* Add global styles or container-level styles here */
 .app {
-  background-color: #F1F1F1;
+  background-color:#F1F1F1;
   width: 100%;
-  height: 120vh;
+  height: auto;
 }
-main {
-  padding: 0 1rem;
-}
+
 </style>

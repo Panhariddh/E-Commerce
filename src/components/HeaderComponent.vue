@@ -10,6 +10,7 @@
       </div>
       <div class="actions">
         <input type="text" placeholder="Search..." class="search-bar" />
+
         <div class="icons">
           <i class="fas fa-user" title="User"></i>
           <i class="fas fa-bell" title="Notifications"></i>
@@ -31,6 +32,9 @@
   </header>
 </template>
 
+<script setup>
+
+</script>
 <style scoped>
 .header-container {
   display: flex;
