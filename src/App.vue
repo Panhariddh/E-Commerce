@@ -26,7 +26,5 @@ import FooterComponent from './components/FooterComponent.vue'
 
   padding: 0 1rem;
 }
-main {
-  padding: 0 1rem;
-}
+
 </style>
