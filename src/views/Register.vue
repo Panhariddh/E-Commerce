@@ -1,51 +1,46 @@
 <template>
-  <div class="login-container">
-    <!-- Left Section with the Image -->
-    <div class="left-section">
-      <img src="https://account.statily.app/img/login_left_img.jpg" alt="Login Illustration" />
-    </div>
-
-    <!-- Right Section with the Form -->
-    <div class="right-section">
-      <h1>Welcome Back</h1>
-      <p>Login to your account</p>
-      <form @submit.prevent="handleLogin">
-        <div class="form-group">
-          <label for="email">Username</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="Your email"
-            v-model="email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <div class="password-container">
+    <div class="register-container">
+      <div class="left-section">
+        <img src="https://img.freepik.com/premium-vector/mobile-online-shopping-people-buy-dresses-shirts-pants-online-shops-shoppers-buying-internet-sale-flat-illustration-online-clothing-store-discount-total-sale-concept_229548-60.jpg?semt=ais_hybrid" alt="Register Illustration" />
+      </div>
+  
+      <div class="right-section">
+        <h1>Create an Account</h1>
+        <p>Register to get started</p>
+        <form @submit.prevent="handleRegister">
+          <div class="form-group">
+            <label for="username">Username</label>
             <input
-              :type="passwordVisible ? 'text' : 'password'"
+              type="text"
+              id="username"
+              placeholder="Your username"
+              v-model="username"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Your email"
+              v-model="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
               id="password"
               placeholder="Your password"
               v-model="password"
               required
             />
-            <button
-              type="button"
-              class="toggle-password"
-              @click="togglePassword"
-            >
-              <span v-if="passwordVisible">👁</span>
-              <span v-else>👁️‍🗨️</span>
-            </button>
           </div>
-        </div>
-        <p class="forgot-password">
-          <a href="/reset-password">Forgot password?</a>
-        </p>
-        <button type="submit" class="login-button">Login</button>
-      </form>
-      <div class="social-login">
+          <button type="submit" class="register-button">Register</button>
+        </form>
+        <div class="social-login">
         <p>Login with</p>
         <div class="social-icons">
           <a href="#"><i class="fab fa-facebook"></i></a>
@@ -53,38 +48,30 @@
           <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" alt="Google" /></a>
         </div>
       </div>
-      <p>
-        Don’t have an account? <a href="/register">Sign Up</a>
-      </p>
+      </div>
     </div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "Login",
-  data() {
-    return {
-      email: "",
-      password: "",
-      passwordVisible: false,
-    };
-  },
-  methods: {
-    togglePassword() {
-      this.passwordVisible = !this.passwordVisible;
+  </template>
+  
+  <script>
+  export default {
+    name: "Register",
+    data() {
+      return {
+        username: "",
+        email: "",
+        password: "",
+      };
     },
-    handleLogin() {
-      this.$router.push("/"); // Navigate to home
-      // Implement your login logic here
+    methods: {
+      handleRegister() {
+        this.$router.push("/"); // Navigate to home
+      },
     },
-  },
-};
-</script>
-
+  };
+  </script>
 <style scoped>
 /* Styling for the container */
-.login-container {
+.register-container {
   display: flex;
   align-items: center;
   height: 100vh;
@@ -99,7 +86,7 @@ export default {
 }
 .left-section img {
   width: 100%;
-  height: 80vh;
+  height: 82vh;
 }
 .right-section {
   flex: 1;
@@ -150,7 +137,7 @@ input {
   text-align: right;
   margin-bottom: 20px;
 }
-.login-button {
+.register-button {
   background-color: #6c63ff;
   color: white;
   padding: 12px 16px;
@@ -180,4 +167,4 @@ a {
 a:hover {
   text-decoration: underline;
 }
-</style>
+</style> 

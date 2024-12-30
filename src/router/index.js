@@ -7,6 +7,8 @@ import Shop from '@/views/Shop.vue'
 import Contact from '@/views/Contact.vue'
 import About from '@/views/About.vue'
 import Login from '@/views/Login.vue'  // import the Login component
+import ViewDetail from '@/views/ViewDetail.vue'
+import Register from '@/views/Register.vue'
 // import Notifications from '@/views/Notifications.vue'; // New notifications view
 // import Cart from '@/views/Cart.vue'; // New cart view
 
@@ -43,6 +45,11 @@ const router = createRouter({
       name: 'login',
       component: Login,
     },
+    {
+      path: '/register',  // Add the register route
+      name: 'register',
+      component: Register,
+    },
     // {
     //   path: '/notifications',
     //   name: 'notifications',
@@ -53,6 +60,11 @@ const router = createRouter({
     //   name: 'cart',
     //   component: Cart,
     // },
+    {
+      path: '/view-detail/:id',
+      name: 'ViewDetail',
+      component: ViewDetail,
+    },
     {
       path: '/:pathMatch(.*)*',
       redirect: '/login', // Redirects any undefined route to the login page
