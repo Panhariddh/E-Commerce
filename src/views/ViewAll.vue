@@ -94,7 +94,7 @@ import { ref, onMounted } from 'vue';
           {image:'https://i.pinimg.com/736x/b7/99/e5/b799e57859ca518b7810455b32783b2d.jpg',name:"Dell refreshes XPS 13"},
           {image:'https://i.pinimg.com/736x/76/1e/d3/761ed3f968fc5f90fb56215266de2e6e.jpg',name:"DELL XPS 13 PLUS 9320"},
     ],
-    ALIEWARE: [
+    ALIENWARE: [
           {image:'https://i.pinimg.com/736x/06/94/86/069486e17c63b2d4e15a632b767c2387.jpg',name:"Alienware M18 R2"},
           {image:'https://i.pinimg.com/736x/3f/01/00/3f010036105ea4812cb52dc14c8de2c1.jpg',name:"Alienware 15 R4"},
           {image:'https://i.pinimg.com/736x/cd/34/39/cd34399931d3ee1350a255e83782a153.jpg',name:"Alienware M15 R7"},

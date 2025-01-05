@@ -1,5 +1,5 @@
 <template>
-  <HeaderComponent />
+  <HeaderComponent @add-to-cart="handleAddToCart" />
   <div class="product-detail" v-if="product">
     <div class="product-container">
       <img class="product-image" :src="product.image" :alt="product.name" />
@@ -19,7 +19,7 @@
           <p><strong>Total Price:</strong> <span class="price">{{ product.price }}</span></p>
         </div>
         <div class="action-buttons">
-          <button class="add-to-cart">Add To Cart</button>
+          <button class="add-to-cart" @click="addToCart">Add To Cart</button>
           <button class="buy-now">Buy Now</button>
         </div>
       </div>
@@ -33,6 +33,7 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
+import { eventCart } from '@/stores/eventCart';
 
 // Mock product data (shared or fetched from API)
 const products = [
@@ -76,7 +77,12 @@ export default {
       product.value = products.find((p) => p.id === productId); // Find product by ID
     });
 
-    return { product };
+    const addToCart = () => {
+      eventCart.value.cartItems.push(product.value);
+      eventCart.value.cartCount = eventCart.value.cartItems.length;
+    };
+
+    return { product, addToCart };
   },
 };
 </script>

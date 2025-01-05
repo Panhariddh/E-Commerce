@@ -11,7 +11,7 @@
       <p>Login to your account</p>
       <form @submit.prevent="handleLogin">
         <div class="form-group">
-          <label for="email">Username</label>
+          <label for="email">Email Address</label>
           <input
             type="email"
             id="email"

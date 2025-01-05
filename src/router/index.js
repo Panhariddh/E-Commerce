@@ -10,6 +10,7 @@ import Login from '@/views/Login.vue'  // import the Login component
 import ViewDetail from '@/views/ViewDetail.vue'
 import Register from '@/views/Register.vue'
 import ViewAll from '@/views/ViewAll.vue'
+import Checkout from '@/views/Checkout.vue'
 // import Notifications from '@/views/Notifications.vue'; // New notifications view
 // import Cart from '@/views/Cart.vue'; // New cart view
 
@@ -69,6 +70,11 @@ const router = createRouter({
     {
       path: '/viewAll/:brand', component: ViewAll
       
+    },
+    {
+      path: "/checkout",
+      name: "Checkout",
+      component: Checkout,
     },
     {
       path: '/:pathMatch(.*)*',
