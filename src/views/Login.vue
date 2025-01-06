@@ -75,7 +75,15 @@ export default {
       this.passwordVisible = !this.passwordVisible;
     },
     handleLogin() {
+<<<<<<< Updated upstream
       alert(`Email: ${this.email}, Password: ${this.password}`);
+=======
+<<<<<<< Updated upstream
+      this.$router.push("/"); // Navigate to home
+=======
+      alert(`Email: ${this.email}, Password: ${this.password}`);
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
       // Implement your login logic here
     },
   },
@@ -85,6 +93,7 @@ export default {
 <style scoped>
 /* Styling for the container */
 .login-container {
+<<<<<<< Updated upstream
   display: flex;
   align-items: center;
   height: 100vh;
@@ -189,12 +198,129 @@ input {
   width: 24px;
   height: 24px;
 }
+<<<<<<< Updated upstream
 
+=======
+=======
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f4f6;
+}
+
+.left-section img {
+
+  width: 100%;
+  height: 80vh;
+}
+
+.right-section {
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.forgot-password {
+  margin-top: -10px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.login-button {
+  background-color: #6c63ff;
+  color: white;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social-login {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 a {
   color: #6c63ff;
   text-decoration: none;
 }
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 a:hover {
   text-decoration: underline;
 }
