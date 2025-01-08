@@ -34,34 +34,7 @@ import { useRoute } from 'vue-router';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import FooterComponent from '@/components/FooterComponent.vue';
 import { eventCart } from '@/stores/eventCart';
-
-// Mock product data (shared or fetched from API)
-const products = [
-  {
-    id: 1,
-    name: 'Asus ROG G531',
-    image: '/src/assets/images/asus.png',
-    price: '$999',
-  },
-  {
-    id: 2,
-    name: 'Lenovo V14',
-    image: '/src/assets/images/Lenovo.png',
-    price: '$849',
-  },
-  {
-    id: 3,
-    name: 'Apple MacBook Pro',
-    image: '/src/assets/images/Apple.png',
-    price: '$1,199',
-  },
-  {
-    id: 4,
-    name: 'Windows Laptop',
-    image: '/src/assets/images/alien.png',
-    price: '$1,099',
-  },
-];
+import { products, productsByBrand } from '@/stores/ProductStore';
 
 export default {
   components: {
@@ -73,8 +46,9 @@ export default {
     const product = ref(null); // Reactive product state
 
     onMounted(() => {
-      const productId = parseInt(route.params.id, 10); // Get product ID from route
-      product.value = products.find((p) => p.id === productId); // Find product by ID
+      const productId = parseInt(route.params.id, 10);
+      const allProducts = [...products, ...Object.values(productsByBrand).flat()];
+      product.value = allProducts.find((p) => p.id === productId);
     });
 
     const addToCart = () => {
