@@ -183,7 +183,7 @@ ul{
 }
 .product-card img {
   width: 100%;
-  height: 17rem;
+  height: auto;
   object-fit: contain;
 }
 @media (max-width:768px){

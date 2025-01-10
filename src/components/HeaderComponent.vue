@@ -91,10 +91,10 @@ export default {
       this.isNotificationsVisible = false;
     },
     removeFromCart(productId) {
-      const index = eventCart.cartItems.findIndex(item => item.id === productId);
+      const index = eventCart.value.cartItems.findIndex(item => item.id === productId);
       if (index !== -1) {
-        eventCart.cartItems.splice(index, 1);
-        eventCart.cartCount = eventCart.cartItems.length;
+        eventCart.value.cartItems.splice(index, 1);
+        eventCart.value.cartCount = eventCart.value.cartItems.length;
       }
     },
   },
