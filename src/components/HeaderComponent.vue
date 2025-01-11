@@ -41,7 +41,7 @@
                 <button @click.stop="removeFromCart(item.id)">Remove</button>
               </li>
             </ul>
-            <button class="checkout-button">CHECKOUT</button>
+            <button class="checkout-button"><router-link to="/checkout" > CHECKOUT</router-link></button>
           </div>
           <p v-else class="empty-cart">Your cart is empty.</p>
         </div>
@@ -274,17 +274,21 @@ export default {
 .checkout-button {
   width: 100%;
   padding: 10px;
-  background-color: #ccc;
-  color: white;
   border: none;
   border-radius: 0 0 5px 5px;
   margin-top: auto;
-  cursor: not-allowed;
+  border-radius: 5px;
+  background-color: #cbfbf6;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.checkout-button:disabled {
-  cursor: not-allowed;
+.checkout-button:hover{
+  background-color: white;
+  color: #4381f4;
+  border: 1px solid #4381f4;
 }
+
 
 .cart-count {
   background-color: red;
