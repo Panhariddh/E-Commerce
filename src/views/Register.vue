@@ -64,13 +64,16 @@
     },
     methods: {
       handleRegister() {
-        this.$router.push("/"); // Navigate to home
+        localStorage.setItem("username", this.username);
+        localStorage.setItem("email", this.email);
+        localStorage.setItem("password", this.password);
+        this.$router.push("/"); 
       },
     },
   };
   </script>
 <style scoped>
-/* Styling for the container */
+
 .register-container {
   display: flex;
   align-items: center;

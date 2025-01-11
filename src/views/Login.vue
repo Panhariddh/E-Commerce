@@ -75,15 +75,17 @@ export default {
       this.passwordVisible = !this.passwordVisible;
     },
     handleLogin() {
-      this.$router.push("/"); // Navigate to home
-      // Implement your login logic here
+      localStorage.setItem("email", this.email);
+      localStorage.setItem("password", this.password);
+      
+      this.$router.push("/"); 
     },
   },
 };
 </script>
 
 <style scoped>
-/* Styling for the container */
+
 .login-container {
   display: flex;
   align-items: center;
@@ -99,7 +101,7 @@ export default {
 }
 .left-section img {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 .right-section {
   flex: 1;

@@ -16,7 +16,7 @@
           </router-link>
           <!-- Bell icon with dropdown -->
           <div class="notification-wrapper" @click="toggleNotifications">
-            <i class="fas fa-bell"></i>
+            <i class="fas fa-bell title"></i>
             <div v-if="isNotificationsVisible" class="notification-dropdown">
               <div class="dropdown-header">
                 <span>Messages</span>
