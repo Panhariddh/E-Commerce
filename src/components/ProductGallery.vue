@@ -1,4 +1,7 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+// Product data
 const products = [
   {
     id: 1,
@@ -19,35 +22,40 @@ const products = [
     name: 'Apple MacBook Pro',
     description: 'Ultra-slim design for portability.',
     image: '/src/assets/images/Apple.png',
-    name: 'Asus ROG Strix G15',
-    description: 'Sleek design with high performance.',
-    image: 'https://m.media-amazon.com/images/I/71uwt2lB0gL._AC_SL1500_.jpg',
-    price: '$899',
+    price: '$1,199',
   },
   {
     id: 4,
-    name: 'ASUS ROG Strix G16 (2024)',
+    name: 'Windows Laptop',
     description: 'Perfect for productivity and gaming.',
-
     image: '/src/assets/images/alien.png',
     price: '$1,099',
-
-    image: 'https://m.media-amazon.com/images/I/81GrCeuCzxL.jpg',
-    price: '$1,399',
   },
 ];
+
+// Router instance
+const router = useRouter();
+
+// Navigation function to go to product details
+const goToDetails = (productId) => {
+  router.push({ name: 'ViewDetail', params: { id: productId } });
+};
 </script>
 
 <template>
   <section class="product-gallery">
     <h2>Featured Products</h2>
     <div class="grid">
-      <div v-for="product in products" :key="product.id" class="product-card">
-        <img :src="product.image" :alt="product.name" class="image"/>
+      <div
+        v-for="product in products"
+        :key="product.id"
+        class="product-card"
+      >
+        <img :src="product.image" :alt="product.name" />
         <h3>{{ product.name }}</h3>
         <p>{{ product.description }}</p>
         <span class="price">{{ product.price }}</span>
-        <button>View Details</button>
+        <button class="view-detail-btn" @click="goToDetails(product.id)">View Details</button>
       </div>
     </div>
   </section>
@@ -57,7 +65,6 @@ const products = [
 .product-gallery {
   padding: 2rem;
   text-align: center;
-  background-color: #f09a9a;
 }
 
 .product-gallery h2 {
@@ -70,7 +77,6 @@ const products = [
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  height: 500px;
 }
 
 .product-card {
@@ -88,7 +94,7 @@ const products = [
 
 .product-card img {
   max-width: 100%;
-  height: 250px;
+  height: auto;
   border-radius: 8px;
 }
 
@@ -110,7 +116,7 @@ const products = [
   display: block;
   font-size: 1.1rem;
   font-weight: bold;
-  color: #000000;
+  color: #00c9a7;
   margin-bottom: 1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -123,7 +129,9 @@ const products = [
   border-radius: 5px;
   cursor: pointer;
   width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 .product-card button:hover {
   background-color: #008f7a;
 }

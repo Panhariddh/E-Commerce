@@ -1,6 +1,7 @@
 <template>
+  <HeaderComponent/>
   <div class="container-shop">
-    <div class="branch" v-for="(products, brand) in productsByBrand" :key="brand">
+    <div class="branch" v-for="(products, brand) in productsByBrand" :key="brand" >
       <div class="row1">
         <button type="button">{{ brand }}</button>
         <button type="button" @click="$router.push(`/viewAll/${brand}`)">View All</button>
@@ -15,14 +16,16 @@
       </div>
     </div>
   </div>
-</template>
-
-<script setup>
+    <FooterComponent/>
+  </template>
+  
+  <script setup>
+import FooterComponent from '@/components/FooterComponent.vue';
+import HeaderComponent from '@/components/HeaderComponent.vue';
 import ShopComponent from '@/components/ShopComponent.vue';
 import { ref } from "vue";
 
 const selectedBrand = ref(null);
-
 const productsByBrand = {
   APPLE: [
         { image: 'https://i.pinimg.com/736x/32/f6/2b/32f62bcdbd573761c93bfc881225e00f.jpg', name: "MacBook Air M1" },
@@ -54,7 +57,7 @@ const productsByBrand = {
         {image:'https://i.pinimg.com/736x/04/6e/63/046e635288c4a736f40676c887266ef9.jpg',name:"Dell Latitude 3510 Ci7-10th"},
         {image:'https://i.pinimg.com/736x/5b/3a/19/5b3a19118a41dee4b4a21872f71d463e.jpg',name:"Dell Latitude 5430 (2023) Ci5-12th"}
     ],
-  ALIEWARE:[
+  ALIENWARE:[
         {image:'https://i.pinimg.com/736x/06/94/86/069486e17c63b2d4e15a632b767c2387.jpg',name:"Alienware M18 R2"},
         {image:'https://i.pinimg.com/736x/3f/01/00/3f010036105ea4812cb52dc14c8de2c1.jpg',name:"Alienware 15 R4"},
         {image:'https://i.pinimg.com/736x/cd/34/39/cd34399931d3ee1350a255e83782a153.jpg',name:"Alienware M15 R7"},
@@ -75,7 +78,6 @@ const productsByBrand = {
   padding: 1rem;
   background-color: white;
 }
-
 .branch {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -83,7 +85,6 @@ const productsByBrand = {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 .row1 {
   display: flex;
   justify-content: space-between;
@@ -115,3 +116,6 @@ const productsByBrand = {
   margin-top: 1rem;
 }
 </style>
+
+
+  

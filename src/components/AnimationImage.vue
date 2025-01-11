@@ -1,7 +1,7 @@
 <template>
   <div class="containerImage">
     <div class="boxImage1">
-      <img :src="images1[currentIndex1]" alt="" class="w-100 h-100 animated-image">
+      <img :src="images1[currentIndex1]" alt="" class="w-100 h-100 animated-image" >
     </div>
     <div class="boxImage2">
       <img :src="images2[currentIndex2]" alt="" class="w-100 h-100 animated-image">
