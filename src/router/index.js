@@ -11,6 +11,7 @@ import ViewDetail from '@/views/ViewDetail.vue'
 import Register from '@/views/Register.vue'
 import ViewAll from '@/views/ViewAll.vue'
 import Checkout from '@/views/Checkout.vue'
+import ViewProduct from '@/views/ViewProduct.vue'
 // import Notifications from '@/views/Notifications.vue'; // New notifications view
 // import Cart from '@/views/Cart.vue'; // New cart view
 
@@ -66,6 +67,11 @@ const router = createRouter({
       path: '/view-detail/:id',
       name: 'ViewDetail',
       component: ViewDetail,
+    },
+    {
+      path: '/view-product/:id',
+      name: 'ViewProduct',
+      component: ViewProduct,
     },
     {
       path: '/viewAll/:brand', component: ViewAll

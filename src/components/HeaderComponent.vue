@@ -105,7 +105,7 @@ export default {
 .header-container {
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background-color: #f2f2f2;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid #e0e0e0;
 }

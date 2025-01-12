@@ -19,7 +19,7 @@ import FooterComponent from './components/FooterComponent.vue'
 <style>
 /* Add global styles or container-level styles here */
 .app {
-  background-color: #F1F1F1;
+  background-color: #FFFFFF;
   width: 100%;
   height: 120vh;
 }
