@@ -20,7 +20,7 @@
         </div>
         <div class="action-buttons">
           <button class="add-to-cart" @click="addToCart">Add To Cart</button>
-          <button class="buy-now">Buy Now</button>
+          <router-link to="/checkout" ><button class="buy-now" @click="addToCart">Buy Now</button></router-link>
         </div>
       </div>
     </div>
