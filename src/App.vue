@@ -20,7 +20,6 @@ import FooterComponent from './components/FooterComponent.vue'
 .app {
   background-color:#F1F1F1;
   width: 100%;
-  height: auto;
+  height: 120vh;
 }
-
 </style>

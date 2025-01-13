@@ -1,4 +1,7 @@
 <script setup>
+import { useRouter } from 'vue-router'; // Import Vue Router
+
+// Product data
 const products = [
   {
     id: 1,
@@ -29,6 +32,14 @@ const products = [
     price: '$1,099',
   },
 ];
+
+// Router instance
+const router = useRouter();
+
+// Navigation function to go to product details
+const goToDetails = (productId) => {
+  router.push({ name: 'ViewDetail', params: { id: productId } });
+};
 </script>
 
 <template>
@@ -40,7 +51,7 @@ const products = [
         <h3>{{ product.name }}</h3>
         <p>{{ product.description }}</p>
         <span class="price">{{ product.price }}</span>
-        <button>View Details</button>
+        <button class="view-detail-btn" @click="goToDetails(product.id)">View Details</button>
       </div>
     </div>
   </section>
@@ -115,6 +126,7 @@ const products = [
   border-radius: 5px;
   cursor: pointer;
   width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .product-card button:hover {

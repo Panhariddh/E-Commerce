@@ -8,7 +8,4 @@
   import BrandList from '@/components/BrandList.vue';
 </script>
 
-<style>
-
-</style>
   

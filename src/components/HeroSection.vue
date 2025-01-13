@@ -1,4 +1,11 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+function navigateToShop() {
+  router.push('/shop');
+}
 </script>
 
 <template>
@@ -6,7 +13,7 @@
     <div class="content">
       <h1 class="hero-title">New Laptop</h1>
       <p class="hero-subtitle">We have in stock</p>
-      <button>Shop Now</button>
+      <button @click="navigateToShop">Shop Now</button>
     </div>
     <div class="image-container">
       <img src="https://toptechkh.com/wp-content/uploads/2024/04/3.jpg" alt="New Laptop" />

@@ -19,16 +19,16 @@
           <h4>Information:</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><router-link to="/shop"><a href="#">Shop</a></router-link></li>
+            <li><router-link to="/about"><a href="#">About</a></router-link></li>
+            <li><router-link to="/product"><a href="#">Product</a></router-link></li>
+            <li><router-link to="/contact"><a href="#">Contact</a></router-link></li>
           </ul>
         </div>
 
         <div class="footer-section contact">
           <h4>Contact</h4>
-          <p>Telegram: <a href="https://t.me/emberpcstore">https://t.me/emberpcstore</a></p>
+          <p>Telegram: <a href="https://t.me/+RvMKkj7OjAYyMzE1">https://t.me/emberpcstore</a></p>
           <p>Sale Phone Number: 012 111 111</p>
           <p>Email: <a href="mailto:emberStore@gmail.com">emberStore@gmail.com</a></p>
           <div class="social-icons">
