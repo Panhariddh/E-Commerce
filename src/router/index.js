@@ -12,6 +12,8 @@ import Register from '@/views/Register.vue'
 import ViewAll from '@/views/ViewAll.vue'
 import Checkout from '@/views/Checkout.vue'
 import ViewProduct from '@/views/ViewProduct.vue'
+import Alertbox from '@/views/Alertbox.vue'
+
 // import Notifications from '@/views/Notifications.vue'; // New notifications view
 // import Cart from '@/views/Cart.vue'; // New cart view
 
@@ -81,6 +83,11 @@ const router = createRouter({
       path: "/checkout",
       name: "Checkout",
       component: Checkout,
+    },
+    {
+      path: '/Alertbox',
+      name: 'Alert',
+      component: Alertbox,
     },
     {
       path: '/:pathMatch(.*)*',

@@ -28,13 +28,13 @@
       </div>
       <div class="row btnCheckout">
         <div class="col"><button type="button"  @click="cancelCheckout" class="btnCancel"><h4>Cancel</h4></button></div>
-        <div class="col"><button type="button" @click="AlertOrder" class="btnOrder"><h4>Order</h4></button></div>
+        <!-- <div class="col"><button type="button" @click="AlertOrder" class="btnOrder"><h4>Order</h4></button></div> -->
       </div>
     </div>
   </template>
   
   <script>
-  import Swal from 'sweetalert2';
+  // import Swal from 'sweetalert2';
   import { eventCart } from '@/stores/eventCart';
   import { ref } from 'vue';
   
@@ -70,14 +70,7 @@
           eventCart.value.cartCount = eventCart.value.cartItems.length;
         }
       },
-      AlertOrder(event) {
-        event.preventDefault();
-        Swal.fire({
-          title: "Transaction Complete!",
-        //   text: `${this.Name.value}`, // Access ref correctly using this
-          icon: "success",
-        });
-      },
+
       cancelCheckout() {
       this.$router.push("/shop"); 
       },
@@ -168,7 +161,7 @@
     padding: 0;
   }
   
-  .btnCancel, .btnOrder {
+  .btnCancel {
     width: 100%;
     padding: 12px;
     border-radius: 5px;
