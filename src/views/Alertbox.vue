@@ -7,9 +7,12 @@
     </div>
     </template>
     <script>
+    import { eventCart } from '@/stores/eventCart';
     export default {
       methods: {
         goToPaymentOption(){
+          eventCart.value.cartItems = [];
+          eventCart.value.cartCount = 0;
           // Back to the order screen
           this.$router.push('/');
         }
